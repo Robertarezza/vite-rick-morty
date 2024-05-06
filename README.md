@@ -7,4 +7,4 @@ Potete consultare la documentazione completa di API qui: https://rickandmortyapi
 
 
 ## Bonus:
-- [] Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
+- [x] Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.

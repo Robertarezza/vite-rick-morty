@@ -23,6 +23,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   border: none;
+  background-color: transparent;
 
   img {
     border-radius: 50%;

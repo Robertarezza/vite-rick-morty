@@ -12,13 +12,14 @@ export default {
   data() {
     return {};
   },
+ 
 };
 </script>
 
 <template>
   <div class="container mt-5">
     <div class="row row-cols-4">
-      <div class="col mb-4" v-for="card in cardsArray">
+      <div class="col mb-4" v-for="card in cardsArray"  >
         <CardsList :cardObj="card"/>
       </div>
     </div>
