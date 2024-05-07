@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="m-3">
     <h5>Visualizzati {{ store.cardsArray.length }} personaggi</h5> 
   </div>
 </template>
