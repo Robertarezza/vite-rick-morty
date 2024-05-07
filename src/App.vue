@@ -7,8 +7,6 @@ import AppLoad from "./components/AppLoad.vue";
 import AppSearch from "./components/AppSearch.vue";
 import AppTotalResult from "./components/AppTotalResult.vue";
 
-
-
 export default {
   components: {
     AppHeader,
@@ -20,10 +18,8 @@ export default {
 
   data() {
     return {
-     
       isLoading: false,
       store,
-    
     };
   },
 
@@ -34,14 +30,12 @@ export default {
     getCards() {
       this.isLoading = true;
       // Costuriamo i parametri per la chiamata axios
-       const paramsObj = {
-       
-       };
+      const paramsObj = {};
 
       // Se c'è il filtro applicato, aggiungo anche chiave status all'oggetto di params
       if (this.store.selectedStatus !== "All") {
         paramsObj.status = this.store.selectedStatus;
-         console.log("Get cards", this.store.selectedStatus)
+        console.log("Get cards", this.store.selectedStatus);
       }
 
       axios
@@ -59,13 +53,10 @@ export default {
 
 <template>
   <AppHeader />
-  <div >
-    <AppSearch  @filter="getCards"/>
-    <AppTotalResult />
-  </div>
- 
+  <AppSearch @filter="getCards" />
+  <AppTotalResult />
   <AppLoad v-if="isLoading" />
-  <AppCards v-else  />
+  <AppCards v-else />
 </template>
 
 <style lang="scss"></style>
