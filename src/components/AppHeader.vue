@@ -20,8 +20,14 @@ export default {
 
 <style lang="scss" scoped>
 
-h1{
+header{
+margin: 2rem;
+  h1{
     text-align:center;
     margin-bottom:2rem;
 }
+
+}
+
+
 </style>

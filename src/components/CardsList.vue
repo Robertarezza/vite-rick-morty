@@ -6,6 +6,15 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    status () {
+        if (this.cardObj.status === "unknown") {
+         return  "NO STATUS ";
+      } else {
+        return this.cardObj.status;
+      }
+    },
+  },
 };
 </script>
 
@@ -14,7 +23,8 @@ export default {
     <img :src="cardObj.image" alt="" />
     <div class="card-body">
       <h2>{{ cardObj.name }}</h2>
-      <p>{{ cardObj.status }}</p>
+      <p>{{ status }}</p>
+      <!-- non c'è cardObj perche sto cambiando qualcosa nel computed -->
       <p>{{ cardObj.species }}</p>
     </div>
   </div>

@@ -14,18 +14,23 @@ export default {
   data() {
     return {
       cardsArray: [],
-      isLoading: true,
+      isLoading: false,
     };
   },
 
   created() {
+    this.isLoading = true;
+
     axios.get("https://rickandmortyapi.com/api/character").then((resp) => {
       console.log(resp);
       this.cardsArray = resp.data.results;
       console.log("Dati ricevuti:", resp.data.results);
 
+      
         this.isLoading = false;
-      console.log("Fine del caricamento.");
+        console.log("fine caricamento");
+      
+      
     });
   },
 };
