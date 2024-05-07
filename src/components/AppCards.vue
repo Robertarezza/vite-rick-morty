@@ -1,16 +1,15 @@
 <script>
 import CardsList from "./CardsList.vue";
+import { store } from "../store";
 
 export default {
   components: {
     CardsList,
   },
-  props: {
-    cardsArray: Array,
-  },
-
   data() {
-    return {};
+    return {
+      store,
+    };
   },
  
 };
@@ -19,7 +18,7 @@ export default {
 <template>
   <div class="container mt-5">
     <div class="row row-cols-4">
-      <div class="col mb-4" v-for="card in cardsArray"  >
+      <div class="col mb-4" v-for="card in store.cardsArray"  >
         <CardsList :cardObj="card"/>
       </div>
     </div>

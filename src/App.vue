@@ -17,7 +17,7 @@ export default {
 
   data() {
     return {
-      cardsArray: [],
+     
       isLoading: false,
       store,
     
@@ -25,19 +25,7 @@ export default {
   },
 
   created() {
-    this.isLoading = true;
-
-    axios.get("https://rickandmortyapi.com/api/character").then((resp) => {
-      console.log(resp);
-      this.cardsArray = resp.data.results;
-      console.log("Dati ricevuti:", resp.data.results);
-
-      
-        this.isLoading = false;
-        console.log("fine caricamento");
-      
-      
-    });
+    this.getCards();
   },
   methods: {
     getCards() {
@@ -58,7 +46,7 @@ export default {
           params: paramsObj,
         })
         .then((resp) => {
-          this.cardsArray = resp.data.results;
+          this.store.cardsArray = resp.data.results;
           this.isLoading = false;
         });
     },
@@ -70,7 +58,7 @@ export default {
   <AppHeader />
   <AppSearch  @filter="getCards"/>
   <AppLoad v-if="isLoading" />
-  <AppCards v-else :cardsArray="cardsArray" />
+  <AppCards v-else  />
 </template>
 
 <style lang="scss"></style>

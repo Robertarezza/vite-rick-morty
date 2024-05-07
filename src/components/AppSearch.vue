@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex justify-content-center align-content-center flex-wrap-wrap">
+  <div>
     <h5>Seleziona i personaggi in base allo STATUS</h5>
     <select @change="$emit('filter')" v-model="store.selectedStatus">
       <option :value="statu" v-for="statu in status">
@@ -23,8 +23,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-select {
+div {
+  text-align: center;
+  select {
   width: 10%;
   margin: 0 auto;
 }
+}
+
 </style>

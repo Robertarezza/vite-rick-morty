@@ -23,5 +23,5 @@ Come dovete procedere:
 
 
 ## Bonus:
-1. [] Fare refactorin dell'app, inserendo la lista dei personaggi nello store globale
+1. [x] Fare refactorin dell'app, inserendo la lista dei personaggi nello store globale
 2. [] Creare un componente che mostri il numero totale di risultati ottenuti.
