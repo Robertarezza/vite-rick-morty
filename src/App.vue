@@ -5,6 +5,8 @@ import AppCards from "./components/AppCards.vue";
 import AppHeader from "./components/AppHeader.vue";
 import AppLoad from "./components/AppLoad.vue";
 import AppSearch from "./components/AppSearch.vue";
+import AppTotalResult from "./components/AppTotalResult.vue";
+
 
 
 export default {
@@ -13,6 +15,7 @@ export default {
     AppCards,
     AppLoad,
     AppSearch,
+    AppTotalResult,
   },
 
   data() {
@@ -56,7 +59,11 @@ export default {
 
 <template>
   <AppHeader />
-  <AppSearch  @filter="getCards"/>
+  <div >
+    <AppSearch  @filter="getCards"/>
+    <AppTotalResult />
+  </div>
+ 
   <AppLoad v-if="isLoading" />
   <AppCards v-else  />
 </template>
